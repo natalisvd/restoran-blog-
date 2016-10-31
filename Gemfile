@@ -9,6 +9,9 @@ gem 'angular-rails-templates'
 gem 'angular_rails_csrf'
 gem 'responders'
 gem 'devise'
+gem 'devise_token_auth'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets

@@ -1,6 +1,7 @@
 
 require "application_responder"
 class ApplicationController < ActionController::Base
+  include DeviseTokenAuth::Concerns::SetUserByToken
 
   self.responder = ApplicationResponder
   protect_from_forgery with: :exception
@@ -14,6 +15,6 @@ class ApplicationController < ActionController::Base
 
   private
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:login])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:email])
   end
 end
